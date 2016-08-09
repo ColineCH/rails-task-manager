@@ -1,0 +1,17 @@
+<h1 class="text-center">List of all the tasks</h1>
+<div class="text-center">
+  <h4><%= link_to "Add a new task", task_new_path %></h4>
+  <% @tasks.each do |task| %>
+    <p><strong>task name : <%= link_to task.name, task_path(task) %></strong></p>
+    <p>task description: <%= task.description %></p>
+    <p>done ?
+      <% if task.done %>
+        <%= "yes" %>
+      <% else %>
+        <%= "not yet" %>
+      <% end %>
+    </p>
+  <% end %>
+</div>
+
+

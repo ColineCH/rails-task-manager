@@ -1,0 +1,16 @@
+<div class="text-center">
+  <h1><strong><%= @task.name %></strong></h1>
+    <p>task description: <%= @task.description %></p>
+    <p>done ?
+      <% if @task.done %>
+        <%= "yes" %>
+      <% else %>
+        <%= "not yet" %>
+      <% end %>
+    </p>
+    <p><strong><%= link_to "List of all tasks", tasks_path %></strong></p>
+    <p><strong><%= link_to "Update your task", task_edit_path(@task) %></strong></p>
+    <p><strong><%= link_to "Delete your task", task_path(@task), method: :delete %></strong></p>
+</div>
+
+
